@@ -1,5 +1,6 @@
 import { Shield, Users, Settings, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ThemeToggle from "./ThemeToggle";
 
 interface VoteSafeHeaderProps {
   currentView: string;
@@ -49,6 +50,7 @@ const VoteSafeHeader = ({ currentView, onViewChange, securityStatus }: VoteSafeH
           </nav>
 
           <div className="flex items-center space-x-3">
+            <ThemeToggle />
             <div className="flex items-center space-x-2">
               <AlertTriangle className={`h-5 w-5 ${getStatusColor()}`} />
               <span className={`text-sm font-medium ${getStatusColor()}`}>
